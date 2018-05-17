@@ -9,13 +9,13 @@
 		<control type="button" id="90102">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>342</label>
-			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
+			<onclick>ActivateWindow(Videos,MovieTitlesLocal,return)</onclick>
 			<visible>Library.HasServices | [Library.HasContent(Movies) + Skin.HasSetting(HomeMenuNoMovieButton)]</visible>
 		</control>
 		<control type="button" id="90103">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>20343</label>
-			<onclick>ActivateWindow(Videos,TvShowTitles,return)</onclick>
+			<onclick>ActivateWindow(Videos,TvShowTitlesLocal,return)</onclick>
 			<visible>Library.HasServices | [Library.HasContent(TVShows) + Skin.HasSetting(HomeMenuNoTVShowButton)]</visible>
 		</control>
 		<control type="button" id="90104">
@@ -72,7 +72,7 @@
 		<control type="button" id="90164">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>369</label>
-			<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
+			<onclick>ActivateWindow(Videos,MovieTitlesLocal,return)</onclick>
 		</control>
 		<control type="button" id="90165">
 			<include>ButtonHomeSubCommonValues</include>
@@ -114,7 +114,7 @@
 		<control type="button" id="90173">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>369</label>
-			<onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
+			<onclick>ActivateWindow(Videos,TVShowTitlesLocal,return)</onclick>
 		</control>
 		<control type="button" id="90174">
 			<include>ButtonHomeSubCommonValues</include>
@@ -169,7 +169,7 @@
 		<control type="button" id="90116">
 			<include>ButtonHomeSubCommonValues</include>
 			<label>14022</label>
-			<onclick>ActivateWindow(Music,Root)</onclick>
+			<onclick>ActivateWindow(Music,RootLocal)</onclick>
 			<visible>Library.HasContent(Music)</visible>
 		</control>
 		<control type="button" id="90117">
@@ -199,6 +199,12 @@
 			<include>ButtonHomeSubCommonValues</include>
 			<label>20092</label>
 			<onclick>ActivateWindow(Loginscreen)</onclick>
+		</control>
+		<control type="button" id="90128">
+			<include>ButtonHomeSubCommonValues</include>
+			<label>$LOCALIZE[706]$INFO[Control.GetLabel(4000),-]</label>
+			<onclick>SendClick(,4000)</onclick>
+			<visible>Control.IsVisible(4000)</visible>
 		</control>
 		<control type="button" id="90125">
 			<include>ButtonHomeSubCommonValues</include>
