@@ -19,17 +19,6 @@
 			<animation effect="slide" time="200" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="slide" time="200" condition="Window.Next(Home)">WindowClose</animation>
 		</control>
-    <control type="button" id="4000">
-			<description>Hidden Button to select Servers</description>
-			<left>-20</left>
-			<top>-20</top>
-			<width>1</width>
-			<height>1</height>
-			<label>-</label>
-			<font>-</font>
-			<texturefocus>-</texturefocus>
-			<texturenofocus>-</texturenofocus>
-		</control>
 		<!-- Music Info -->
 		<control type="group">
 			<depth>DepthMenu</depth>
@@ -971,32 +960,32 @@
 					</item>
 					<item id="10">
 						<label>31954</label>
-						<onclick>ActivateWindow(Videos,MovieTitlesLocal,return)</onclick>
+						<onclick>ActivateWindow(Videos,MovieTitles,return)</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>Library.HasServices | [!Skin.HasSetting(HomeMenuNoMovieButton) + Library.HasContent(Movies)]</visible>
 					</item>
 					<item id="11">
 						<label>31955</label>
-						<onclick>ActivateWindow(Videos,TVShowTitlesLocal,return)</onclick>
+						<onclick>ActivateWindow(Videos,TVShowTitles,return)</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>Library.HasServices | [!Skin.HasSetting(HomeMenuNoTVShowButton) + Library.HasContent(TVShows)]</visible>
 					</item>
 					<item id="3">
 						<label>31956</label>
-						<onclick>ActivateWindow(Music,rootLocal)</onclick>
+						<onclick>ActivateWindow(Music,root)</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
 						<visible>!Skin.HasSetting(HomeMenuNoMusicButton)</visible>
 					</item>
 					<item id="1">
-						<label>31957</label>
+						<label>[UPPERCASE]$LOCALIZE[10510][/UPPERCASE]</label>
 						<onclick condition="!System.Platform.Android">ActivateWindow(Programs,Addons,return)</onclick>
 						<onclick condition="System.Platform.Android">ActivateWindow(Programs)</onclick>
 						<icon>-</icon>
 						<thumb>-</thumb>
-						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton) + !System.Platform.IOS + !System.Platform.TVOS</visible>
+						<visible>!Skin.HasSetting(HomeMenuNoProgramsButton)</visible>
 					</item>
 					<item id="6">
 						<label>31958</label>
